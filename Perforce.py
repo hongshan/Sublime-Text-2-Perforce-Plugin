@@ -292,8 +292,8 @@ def IsFileWritable(in_filename):
 
 # Checkout section
 def Checkout(in_filename):
-    if(IsFileWritable(in_filename)):
-        return -1, "File is already writable."
+    # if(IsFileWritable(in_filename)):
+    #     return -1, "File is already writable."
 
     folder_name, filename = os.path.split(in_filename)
     isInDepot = IsFileInDepot(folder_name, filename)
