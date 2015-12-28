@@ -649,7 +649,7 @@ class ListCheckedOutFilesThread(threading.Thread):
                 cleanedfile = line[0:poundindex]
 
                 # just keep the filename
-                cleanedfile = '/'.join(cleanedfile.split('/')[3:])
+                # cleanedfile = '/'.join(cleanedfile.split('/')[3:])
 
                 file_entry = [cleanedfile[cleanedfile.rfind('/')+1:]]
                 file_entry.append("Changelist: " + in_changelistline[1])
