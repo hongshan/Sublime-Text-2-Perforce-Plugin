@@ -330,10 +330,10 @@ class PerforceAutoCheckout(sublime_plugin.EventListener):
         if(not perforce_settings.get('perforce_auto_checkout') or not perforce_settings.get('perforce_auto_checkout_on_save')):
             return
               
-        if(view.is_dirty()):
-            PrepareCommand();
-            success, message = Checkout(view.file_name())
-            LogResults(success, message);
+        #if(view.is_dirty()):
+        PrepareCommand();
+        success, message = Checkout(view.file_name())
+        LogResults(success, message);
 
 class PerforceCheckoutCommand(sublime_plugin.TextCommand):
     def run(self, edit):
